@@ -95,6 +95,7 @@ let listofChosenCharacters
 
 function getPasswordOptions() {
 
+  // password generator project
 
 passwordLength = prompt("how long would you like your password length to be?");
 lowerCasedCharacters =prompt("Would you like lowercase characters");
