@@ -91,61 +91,62 @@ let upperCasedCharacters = [
 // Function to prompt user for password options
 
 let passwordLength;
-let listofChosenCharacters
+let listofChosenCharacters= [];
 
 function getPasswordOptions() {
 
   // password generator project
 
 passwordLength = prompt("how long would you like your password length to be?");
-lowerCasedCharacters =prompt("Would you like lowercase characters");
-upperCasedCharacters =prompt("Would you like upper case characters");
-specialCharacters= Prompt("Would you like special characters");
+lowerCasedOption =confirm("Would you like lowercase characters");
+upperCasedOptions =confirm("Would you like upper case characters");
+specialCharactersOptions= confirm("Would you like special characters");
 
-}
-
-console.log ("got it!");
 
 // once characters have been chosen by user,  store them in listofChosencharacters and merge all characters into one
-if (upperCasedCharacters === true) {
+// if (passwordLength > 10) {
 
-  listofChosenCharacters = listofChosenCharacters.concat(upperCasedCharacters)
-};
-if (lowerCasedCharacters ===true){
+  
+  
+if (upperCasedOptions === true) {
+    
+    listofChosenCharacters = listofChosenCharacters.concat(upperCasedCharacters);
+  };
+  if (lowerCasedOption ===true){
+    
+    listofChosenCharacters=listofChosenCharacters.concat(lowerCasedCharacters);
+  };
+  
+  if (specialCharactersOptions ===true) {
+    
+    listofChosenCharacters=listofChosenCharacters.concat(specialCharacters);
+  };
+  }
+    // display combination of characters chosen
+    console.log (listofChosenCharacters);
 
-  listofChosenCharacters=listofChosenCharacters.concat(lowerCasedCharacters)
-};
+// } else {
 
-if (specialCharacters ===true) {
-
-  listofChosenCharacters=listofChosenCharacters.concat(specialCharacters)
-}
-
-else {
-
-  alert ("Choose a Number 10 between and 64")
-}
-
-console.log (listofChosenCharacters)
+//   alert ("Please choose a Number 10 between and 64");
+// }
 
 // Function for getting a random element from an array
 // function getRandom(arr) {
 
-//   let randomIndex = Math.floor(Math.random()*arrayName.length)
-// }
-
-// Function to generate password with user input
-function generatePassword() {
-
-  let practicePassword = "";
-  for (let i = 0; i < passwordLength; i++) {
+  
+  // Function to generate password with user input
+  function generatePassword() {
     
-    // practicePassword += "j"
-    practicePassword+= listofChosenCharacters
+    let practicePassword = "";
+    for (let i = 0; i < passwordLength; i++) {
+    
+      // this will the characters typed by the user 
+    let randomIndex = Math.floor(Math.random()*listofChosenCharacters.length)
+    practicePassword+= listofChosenCharacters[randomIndex]
     
   }
 
-  return listofChosenCharacters;
+  return practicePassword
 
 }
 
