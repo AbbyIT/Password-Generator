@@ -97,13 +97,13 @@ function getPasswordOptions() {
 
 
 passwordLength = prompt("how long would you like your password length to be?");
-lowerCasedCharacters =prompt ("Would you like lowercase characters");
+lowerCasedCharacters =prompt("Would you like lowercase characters");
 upperCasedCharacters =prompt("Would you like upper case characters");
-specialCharacters= Prompt ("Would you like special characters");
+specialCharacters= Prompt("Would you like special characters");
 
 }
 
-console.log ()
+console.log ("got it!");
 
 // once characters have been chosen by user,  store them in listofChosencharacters and merge all characters into one
 if (upperCasedCharacters === true) {
@@ -120,15 +120,18 @@ if (specialCharacters ===true) {
   listofChosenCharacters=listofChosenCharacters.concat(specialCharacters)
 }
 
+else {
 
-// Function for getting a random element from an array
-function getRandom(arr) {
-
-  let randomIndex = Math.floor(Math.random()*arrayName.length)
+  alert ("Choose a Number 10 between and 64")
 }
 
+console.log (listofChosenCharacters)
 
+// Function for getting a random element from an array
+// function getRandom(arr) {
 
+//   let randomIndex = Math.floor(Math.random()*arrayName.length)
+// }
 
 // Function to generate password with user input
 function generatePassword() {
@@ -136,11 +139,12 @@ function generatePassword() {
   let practicePassword = "";
   for (let i = 0; i < passwordLength; i++) {
     
-    practicePassword += "j"
+    // practicePassword += "j"
+    practicePassword+= listofChosenCharacters
     
   }
 
-  return practicePassword;
+  return listofChosenCharacters;
 
 }
 
