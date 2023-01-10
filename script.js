@@ -101,7 +101,7 @@ passwordLength = prompt("how long would you like your password length to be?");
 lowerCasedOption =confirm("Would you like lowercase characters");
 upperCasedOptions =confirm("Would you like upper case characters");
 specialCharactersOptions= confirm("Would you like special characters");
-
+numericCharactersOption = confirm("Would you like Numeric characters");
 
 // once characters have been chosen by user,  store them in listofChosencharacters and merge all characters into one
 // if (passwordLength > 10) {
@@ -112,6 +112,12 @@ if (upperCasedOptions === true) {
     
     listofChosenCharacters = listofChosenCharacters.concat(upperCasedCharacters);
   };
+
+  if (numericCharactersOption === true) {
+    
+    listofChosenCharacters = listofChosenCharacters.concat(numericCharacters);
+  };
+
   if (lowerCasedOption ===true){
     
     listofChosenCharacters=listofChosenCharacters.concat(lowerCasedCharacters);
