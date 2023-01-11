@@ -97,44 +97,45 @@ function getPasswordOptions() {
 
   // password generator project
 
-passwordLength = prompt("how long would you like your password length to be?");
+  // Prompt user to enter password length and confirm case options
+
+passwordLength =prompt("how long would you like your password length to be?");
 lowerCasedOption =confirm("Would you like lowercase characters");
 upperCasedOptions =confirm("Would you like upper case characters");
 specialCharactersOptions= confirm("Would you like special characters");
 numericCharactersOption = confirm("Would you like Numeric characters");
 
 // once characters have been chosen by user,  store them in listofChosencharacters and merge all characters into one
-// if (passwordLength > 10) {
 
-  
+
+if (passwordLength > 10  < 64) {
   
 if (upperCasedOptions === true) {
-    
-    listofChosenCharacters = listofChosenCharacters.concat(upperCasedCharacters);
-  };
-
-  if (numericCharactersOption === true) {
-    
-    listofChosenCharacters = listofChosenCharacters.concat(numericCharacters);
-  };
-
-  if (lowerCasedOption ===true){
-    
-    listofChosenCharacters=listofChosenCharacters.concat(lowerCasedCharacters);
-  };
   
-  if (specialCharactersOptions ===true) {
+  listofChosenCharacters = listofChosenCharacters.concat(upperCasedCharacters);
+};
+
+if (numericCharactersOption === true) {
+  
+  listofChosenCharacters = listofChosenCharacters.concat(numericCharacters);
+};
+
+if (lowerCasedOption ===true){
+  
+  listofChosenCharacters=listofChosenCharacters.concat(lowerCasedCharacters);
+};
+
+if (specialCharactersOptions ===true) {
+  
+  listofChosenCharacters=listofChosenCharacters.concat(specialCharacters);
+};
+
+// display combination of characters chosen
+console.log (listofChosenCharacters);
     
-    listofChosenCharacters=listofChosenCharacters.concat(specialCharacters);
-  };
   }
-    // display combination of characters chosen
-    console.log (listofChosenCharacters);
-
-// } else {
-
-//   alert ("Please choose a Number 10 between and 64");
-// }
+}
+ 
 
 // Function for getting a random element from an array
 // function getRandom(arr) {
@@ -155,7 +156,6 @@ if (upperCasedOptions === true) {
   return practicePassword
 
 }
-
 // Get references to the #generate element
 var generateBtn = document.querySelector('#generate');
 
@@ -166,7 +166,7 @@ function writePassword() {
   var passwordText = document.querySelector('#password');
 
   passwordText.value = password;
-}
+ }
 
 // Add event listener to generate button
 generateBtn.addEventListener('click', writePassword);

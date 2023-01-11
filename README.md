@@ -1,5 +1,5 @@
-# Password-Generator
-Week 5 Project 
+# Password-Generator Project
+Week 5  
 
 About The Project
 
