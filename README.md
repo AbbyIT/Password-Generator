@@ -26,10 +26,7 @@ The purpose of this project is for the code to generate a passport when generate
 
   Screenshots of screens - 
   
-  ![image](https://user-images.githubusercontent.com/117487886/222940058-ee672079-2962-42e1-809c-e51a718feca8.png)
-  ![image](https://user-images.githubusercontent.com/117487886/222940072-adf2b8a5-5adf-46d6-b6b4-1db4193bf52a.png)
-  ![image](https://user-images.githubusercontent.com/117487886/222940090-c8f713f5-f19a-4964-b5b5-8c6a6e375ab2.png)
-
+  
 
 
 
